@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>smolnova92 - Card Binder</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(180deg, #12060a 0%, #1b0a12 100%); color: #ffeef2; padding: 24px; }
+    .wrapper { max-width: 1400px; margin: 0 auto; }
+    .header { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 24px; margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .title { font-size: 42px; font-weight: 900; margin-bottom: 10px; color: #ffe5ea; }
+    .subtitle { font-size: 18px; color: rgba(255,235,240,0.82); margin-bottom: 12px; }
+    .stats { font-size: 16px; color: rgba(255,235,240,0.88); }
+    .home-link { display: inline-block; margin-top: 14px; color: #ffb7c5; text-decoration: none; font-weight: bold; }
+    .home-link:hover { text-decoration: underline; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .card { position: relative; border-radius: 18px; overflow: hidden; min-height: 370px; background: linear-gradient(180deg, #2a0d14 0%, #17070b 100%); border: 3px solid #666; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.18s ease, box-shadow 0.18s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,0,0,0.38); }
+    .card.common { border-color: #cfcfcf; box-shadow: 0 0 18px rgba(207,207,207,0.18), 0 8px 24px rgba(0,0,0,0.3); }
+    .card.rare { border-color: #ffd700; box-shadow: 0 0 20px rgba(255,215,0,0.22), 0 8px 24px rgba(0,0,0,0.3); }
+    .card.epic { border-color: #a335ee; box-shadow: 0 0 22px rgba(163,53,238,0.24), 0 8px 24px rgba(0,0,0,0.3); }
+    .card.legendary { border-color: #ff4a4a; box-shadow: 0 0 24px rgba(255,74,74,0.26), 0 8px 24px rgba(0,0,0,0.3); }
+    .card.unowned { border-color: #4f4346; background: linear-gradient(180deg, #1a1416 0%, #100c0d 100%); opacity: 0.9; }
+    .art { height: 250px; background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
+    .art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.75) 0%, rgba(10,0,0,0.15) 35%, rgba(10,0,0,0.02) 60%); }
+    .art.missing { background: linear-gradient(135deg, #2b2225 0%, #171113 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,230,235,0.28); font-size: 32px; font-weight: 900; letter-spacing: 1px; }
+    .info { padding: 14px 16px 18px 16px; position: relative; z-index: 2; }
+    .name { font-size: 24px; font-weight: 900; margin-bottom: 8px; line-height: 1.05; }
+    .name a { color: #ffeef2; text-decoration: none; }
+    .name a:hover { text-decoration: underline; }
+    .rarity { font-size: 15px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
+    .rarity.common { color: #f0f0f0; }
+    .rarity.rare { color: #ffd700; }
+    .rarity.epic { color: #d395ff; }
+    .rarity.legendary { color: #ff9898; }
+    .rarity.unowned { color: #8f7d82; }
+    .footer-note { margin-top: 28px; color: rgba(255,235,240,0.65); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="title">🎴 smolnova92's Card Binder</div>
+      <div class="subtitle">SinSpeaksVT Community Collection</div>
+      <div class="stats">Owned: 2 / 2 cards • Completion: 100.0%</div>
+      <a class="home-link" href="../index.html">← Back to binder home</a>
+    </div>
+    <div class="grid">
+      <div class="card epic">
+        <div class="art" style="background-image: url('../cards/Ducki3Momo.png');"></div>
+        <div class="info">
+          <div class="name"><a href="https://twitch.tv/Ducki3Momo" target="_blank">Ducki3Momo</a></div>
+          <div class="rarity epic">Epic</div>
+        </div>
+      </div>
+      <div class="card rare">
+        <div class="art" style="background-image: url('../cards/SinSpeaksVT.png');"></div>
+        <div class="info">
+          <div class="name"><a href="https://twitch.tv/SinSpeaksVT" target="_blank">SinSpeaksVT</a></div>
+          <div class="rarity rare">Rare</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-note">Highest acquired rarity is shown for each card. Missing cards remain visible until acquired.</div>
+  </div>
+</body>
+</html>
